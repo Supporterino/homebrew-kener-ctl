@@ -6,13 +6,14 @@ class KenerCtl < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/supporterino/kener-ctl/releases/download/v#{version}/kener-ctl-darwin-arm64" # rubocop:disable Homebrew/NoSha256InConditionalBranch
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+      url "https://github.com/supporterino/kener-ctl/releases/download/v#{version}/kener-ctl-darwin-arm64"
     else
-      url "https://github.com/supporterino/kener-ctl/releases/download/v#{version}/kener-ctl-darwin-x64" # rubocop:disable Homebrew/NoSha256InConditionalBranch
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+      url "https://github.com/supporterino/kener-ctl/releases/download/v#{version}/kener-ctl-darwin-x64"
     end
   end
+
+  sha256 arm: "0000000000000000000000000000000000000000000000000000000000000000",
+          intel: "0000000000000000000000000000000000000000000000000000000000000000"
 
   def install
     bin.install Dir["kener-ctl-*"].first => "kener-ctl"

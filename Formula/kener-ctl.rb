@@ -1,16 +1,16 @@
 class KenerCtl < Formula
   desc "Declarative CLI for Kener status pages"
   homepage "https://github.com/supporterino/kener-ctl"
-  version "0.2.1"
+  version "0.3.0"
   license "GPL-3.0-only"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/supporterino/kener-ctl/releases/download/v#{version}/kener-ctl-darwin-arm64"
-      sha256 "1607487d71d3f0411f59f816a483f3638eecccefdea63e47391a1c111348105a"
+      sha256 "74a733fd02b4234443294ff30307b2b38b5cc50559f6cb8b8dd6761ce430ac68"
     else
       url "https://github.com/supporterino/kener-ctl/releases/download/v#{version}/kener-ctl-darwin-x64"
-      sha256 "4828437c677c4b036fe5c1aabaeb92c84dbfbff792bce0c6e4caa3e5a5b2acec"
+      sha256 "8f9a408412a0c8794a5cb9678a3346f94c5c74500d2b2f312718fd6bcf2615a1"
     end
   end
 
